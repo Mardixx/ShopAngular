@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+    .interact {
+        width: 50%;
+    }
+    .imgDiv {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

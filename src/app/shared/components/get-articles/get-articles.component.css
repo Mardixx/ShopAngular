@@ -1,0 +1,19 @@
+.articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  margin: 2rem 1rem 2rem 1rem;
+}
+.articles .article {
+  min-width: 15%;
+  min-height: 25vh;
+  padding: 2rem 0 2rem 0;
+  margin: 1rem 1rem 1rem 1rem;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px groove black;
+}/*# sourceMappingURL=get-articles.component.css.map */
