@@ -1,0 +1,14 @@
+<div class="articles">
+    <div *ngFor="let article of information" class="article">
+        <button type="submit" class="editButton" (click)="updateArticle(article.id ,article, $event)">🖋️</button>
+        <div class="priceDiv">
+            <span [contentEditable]="true" class="priceSpan">{{article.price}}</span>€
+        </div>
+        <span [contentEditable]="true">{{article.name}}</span>
+        <span [contentEditable]="true">{{article.shortDescription}}</span>
+        <div>
+            Type: <span [contentEditable]="true"> {{article.typeOfObject}}</span>
+        </div>
+        <span class="idSpan">Id: {{article.id}}</span>
+    </div>
+</div>
