@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { GetArticlesComponent } from './shared/components/get-articles/get-articles.component';
 
 @Component({
   selector: 'app-root',
