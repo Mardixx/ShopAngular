@@ -17,14 +17,21 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: white;
             label {
                 margin-bottom: 1rem;
             }
-            textarea {
+            #shortDescription {
+                min-width: 20vw;
+                min-height: 3vw;
                 max-width: 50vw;
                 max-height: 10vh;
             }
-        }
+            #longDescription {
+                min-width: 20vw;
+                min-height: 5vw;
+                max-width: 50vw;
+                max-height: 10vh;
+            }
+    }
     }
 }
