@@ -1,5 +1,15 @@
+<div class="searchArea">
+    <form>
+        <label for="searchInput">Search Article</label>
+        <input name="searchInput" [(ngModel)]="searchTerm" placeholder="Search Article...">
+    </form>
+</div>
 <div class="articles">
-    <div *ngFor="let article of information" class="article">
+    <span *ngIf="!information.length">Loading...</span>
+
+    
+
+    <div *ngFor="let article of information | filterArticles : searchTerm()" class="article">
         <span>{{article.name}}</span>
         <span>{{article.shortDescription}}</span>
         <span>Type: {{article.typeOfObject}}</span>

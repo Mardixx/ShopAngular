@@ -1,0 +1,25 @@
+.headerComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    h1 {
+        margin: 1rem;
+        &:hover {
+            color: grey;
+            cursor: grab;
+        }
+    }
+    ul {
+        list-style-type: "\21AA";
+        list-style-position: outside;
+        li {
+            &:hover {
+                color: grey;
+                cursor: grab;
+            }
+        }
+    }
+}

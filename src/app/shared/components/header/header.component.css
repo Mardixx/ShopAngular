@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.headerComponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.headerComponent h1 {
+  margin: 1rem;
+}
+.headerComponent h1:hover {
+  color: grey;
+  cursor: grab;
+}
+.headerComponent ul {
+  list-style-type: "↪";
+  list-style-position: outside;
+}
+.headerComponent ul li:hover {
+  color: grey;
+  cursor: grab;
+}/*# sourceMappingURL=header.component.css.map */

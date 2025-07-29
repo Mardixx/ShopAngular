@@ -1,3 +1,26 @@
+.searchArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        label { 
+            font-size: 2em;
+        }
+        input {
+            width: 25%;
+            height: 2vh;
+            text-align: center;
+        }
+    }
+}
 .articles {
     display: flex;
     flex-direction: row;
