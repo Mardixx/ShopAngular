@@ -7,19 +7,30 @@
     color: white;
     h1 {
         margin: 1rem;
+        width: 10%;
+        text-align: center;
         &:hover {
             color: grey;
             cursor: grab;
         }
     }
-    ul {
-        list-style-type: "\21AA";
-        list-style-position: outside;
-        li {
-            &:hover {
-                color: grey;
-                cursor: grab;
+    .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        ul {
+            list-style-type: "\21AA";
+            list-style-position: outside;
+            li {
+                &:hover {
+                    color: grey;
+                    cursor: grab;
+                }
             }
+        }
+        .userList {
+            list-style-type: "\1F464";
         }
     }
 }

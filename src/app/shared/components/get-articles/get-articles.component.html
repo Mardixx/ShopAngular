@@ -5,7 +5,8 @@
     </form>
 </div>
 <div class="articles">
-    <span *ngIf="!information.length">Loading...</span>
+    <span *ngIf="!information.length && information.length < 0">Loading...</span>
+    <span *ngIf="information.length == 0">No element</span>
 @for (article of information | filterArticles : searchTerm(); track $index) {
     <div class="article">
         <span>{{article.name}}</span>
