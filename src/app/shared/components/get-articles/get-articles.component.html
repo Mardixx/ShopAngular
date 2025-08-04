@@ -6,14 +6,13 @@
 </div>
 <div class="articles">
     <span *ngIf="!information.length">Loading...</span>
-
-    
-
-    <div *ngFor="let article of information | filterArticles : searchTerm()" class="article">
+@for (article of information | filterArticles : searchTerm(); track $index) {
+    <div class="article">
         <span>{{article.name}}</span>
         <span>{{article.shortDescription}}</span>
         <span>Type: {{article.typeOfObject}}</span>
         <span class="priceSpan">{{article.price}}€</span>
         <button type="submit" class="buyButton">Buy</button>
     </div>
+}  
 </div>

@@ -6,7 +6,7 @@ import { FilterArticlesPipe } from '../../pipes/filter-articles.pipe';
 
 @Component({
   selector: 'app-get-articles',
-  imports: [CommonModule, NgFor, FormsModule, FilterArticlesPipe],
+  imports: [CommonModule, FormsModule, FilterArticlesPipe],
   templateUrl: './get-articles.component.html',
   styleUrl: './get-articles.component.scss'
 })
