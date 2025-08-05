@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RESTApiService } from '../../services/restapi.service';
+import { ArticlesService } from '../../services/articles.service';
 
 @Component({
   selector: 'app-post-article',
@@ -11,7 +11,7 @@ import { RESTApiService } from '../../services/restapi.service';
   standalone: true
 })
 export class PostArticleComponent {
-  constructor( private restAPI: RESTApiService ) {}
+  constructor( private articles: ArticlesService ) {}
 
   postInfo: any = new FormGroup({
     name: new FormControl(''),
@@ -23,7 +23,7 @@ export class PostArticleComponent {
 
 
   postForm() {    
-    this.restAPI.postArticle(this.postInfo.value).subscribe(() => {
+    this.articles.postArticle(this.postInfo.value).subscribe(() => {
       console.log('Post succeful');
       return window.location.reload();
     })

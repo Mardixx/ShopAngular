@@ -1,6 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { RESTApiService } from '../../services/restapi.service';
+import { ArticlesService } from '../../services/articles.service';
 import { FormsModule } from '@angular/forms';
 import { FilterArticlesPipe } from '../../pipes/filter-articles.pipe';
 
@@ -12,7 +12,7 @@ import { FilterArticlesPipe } from '../../pipes/filter-articles.pipe';
 })
 export class GetArticlesComponent {
 
-  constructor (private RESTApi: RESTApiService) { }
+  constructor (private articlesService: ArticlesService) { }
 
   information: any = '';
   searchTerm = signal('');
@@ -22,7 +22,7 @@ export class GetArticlesComponent {
   }
 
   onGetArticles() {
-    this.RESTApi.getArticles().subscribe(data => {
+    this.articlesService.getArticles().subscribe(data => {
       this.information = data;
     });
   }

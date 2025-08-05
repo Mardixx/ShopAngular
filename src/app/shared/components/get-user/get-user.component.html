@@ -1,1 +1,12 @@
-<p>get-user works!</p>
+<div class="container">
+    <form>
+      <div class="info">
+         <span>{{userInfo?.username}}</span>
+      </div>
+      @if (userInfo.username) {
+         <button class="logoutButton" (click)="onLogout()">Logout</button>
+      } @else {
+         <span>You are not signed in.</span>
+      }
+    </form>
+</div>

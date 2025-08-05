@@ -1,6 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RESTApiService } from '../../services/restapi.service';
+import { ArticlesService } from '../../services/articles.service';
 
 @Component({
   selector: 'app-update-articles',
@@ -10,7 +10,7 @@ import { RESTApiService } from '../../services/restapi.service';
 })
 export class UpdateArticlesComponent {
 
-  constructor (private RESTApi: RESTApiService) { }
+  constructor (private articles: ArticlesService) { }
 
   information: any = "";
   
@@ -20,7 +20,7 @@ export class UpdateArticlesComponent {
   }
 
   onGetArticles() {
-    this.RESTApi.getArticles().subscribe(data => {
+    this.articles.getArticles().subscribe(data => {
       this.information = data;
     });
   }
@@ -38,7 +38,7 @@ export class UpdateArticlesComponent {
     info.shortDescription = shortDescription;
     info.typeOfObject = typeOfObject;
     
-    this.RESTApi.updateArticle(info, id).subscribe(() => {
+    this.articles.updateArticle(info, id).subscribe(() => {
       window.location.reload();
     })
   }
