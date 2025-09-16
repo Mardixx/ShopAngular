@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UserService } from '../../services/users.service';
 import { Router } from '@angular/router';
 
@@ -25,9 +25,6 @@ export class GetUserComponent {
 
   onGetUsers() {
     this.userInfo = this.loggedUser;
-    // this.userService.getUsers().subscribe(data => {
-    //   this.userInfo = data;
-    // })
   }
 
   onLogout() {

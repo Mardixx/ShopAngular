@@ -12,6 +12,7 @@ import { UserService } from '../../services/users.service';
 export class LoginComponent {
   constructor (private router: Router, private userService: UserService) {}
 
+  loggedIn: boolean = false;
   signUpObject: SignUpModel = new SignUpModel();
   signInObject: SignInModel = new SignInModel();
 
@@ -33,8 +34,8 @@ export class LoginComponent {
       if(this.userInfo != null) {
         const isUserPresent = this.userInfo.find((user: SignInModel) => user.username == this.signInObject.username && user.password == this.signInObject.password);
         if (isUserPresent != undefined) {
-          alert("User Found!")
           localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
+          alert("User Found!")               
           this.router.navigateByUrl('/user');
         } else {
           alert("User Not Found!")

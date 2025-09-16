@@ -1,25 +1,25 @@
 <div class="container">
-    <form>
+    <form class="signUpForm">
         <h3>Sign Up</h3>
-        <div>
+        <div class="usernameDiv">
             <label for="username">Username: </label>
             <input type="text" name="username" id="username" [(ngModel)]="signUpObject.username">
         </div>
-        <div>
+        <div class="passwordDiv">
             <label for="password">Password: </label>
-            <input type="text" name="password" id="password" [(ngModel)]="signUpObject.password">
+            <input type="text" name="password" id="password" [(ngModel)]="signUpObject.password"  autocomplete="off">
         </div>
         <button (click)="onSignUp()">Sign Up</button>
     </form>
-    <form action="post" method="post" >
+    <form action="post" method="post" class="signInForm">
         <h3>Sign In</h3>
-        <div>
+        <div class="usernameDiv">
             <label for="username">Username: </label>
             <input type="text" name="username" id="username" [(ngModel)]="signInObject.username">
         </div>
-        <div>
+        <div class="passwordDiv">
             <label for="password">Password: </label>
-            <input type="text" name="password" id="password" [(ngModel)]="signInObject.password">
+            <input type="text" name="password" id="password" [(ngModel)]="signInObject.password"  autocomplete="off">
         </div>
         <button (click)="onSignIn()">Sign In</button>
     </form>
